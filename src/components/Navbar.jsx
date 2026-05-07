@@ -22,11 +22,14 @@ const menu = [
   };
 
   return (
-    <div className="fixed top-4 w-full z-50 flex justify-center">
+    <div className="fixed top-0 w-full z-50 flex justify-center">
 
       {/* Glass Navbar */}
+       {/* className={`flex items-center justify-between w-[100%] md:w-[100%] px-5 py-3 rounded-2xl 
+      bg-white/10 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.37)]`}
+       */}
       <div className={`flex items-center justify-between w-[100%] md:w-[100%] px-5 py-3 rounded-2xl 
-      bg-white/10 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.37)]`}>
+      bg-white/1 backdrop-blur-sm border border-white/2 shadow-[0_8px_32px_rgba(0,0,0,0.37)]`}>
 
         {/* Logo */}
         <h1 className="text-white font-bold text-lg tracking-wide">
