@@ -28,9 +28,8 @@ export default function About() {
       id="about"
       className="relative py-24 bg-[#030014] text-white overflow-hidden"
     >
-     
       <div className="absolute w-[500px] h-[500px] bg-blue-500/20 blur-3xl rounded-full top-[-100px] left-[-100px]"></div>
-      <div className="absolute w-[400px] h-[400px] bg-purple-500/20 blur-3xl rounded-full bottom-[-100px] right-[-100px]"></div> 
+      <div className="absolute w-[400px] h-[400px] bg-purple-500/20 blur-3xl rounded-full bottom-[-100px] right-[-100px]"></div>
 
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Title */}
@@ -118,12 +117,16 @@ export default function About() {
 
             {/* English Bio Description */}
             <p className="text-gray-400 text-lg leading-relaxed mb-10 text-center lg:text-left">
-              I am a Computer Science and Engineering student at the University
-              of Barishal. As an undergraduate research trainee, I specialize in
-              **Explainable AI** and **Machine Learning**. With expertise in
-              modern web technologies like **React 19** and **Next.js 15**, I
-              build scalable, high-performance applications that deliver
-              impactful digital solutions.
+              I am Rafiul Goni Rayhan, a dedicated Full-stack Web Developer and
+              AI/ML Research Trainee. Currently, I am in my final year of
+              Computer Science and Engineering at the University of Barishal. I
+              specialize in building scalable, high-performance web applications
+              that deliver seamless user experiences. Alongside development, I
+              am deeply involved in AI/ML research, exploring innovative ways to
+              solve real-world problems through data and intelligent systems.
+              Driven by a passion for clean code and continuous learning, I
+              strive to create impactful digital solutions at the intersection
+              of web technology and machine l
             </p>
 
             {/* Action Button */}
