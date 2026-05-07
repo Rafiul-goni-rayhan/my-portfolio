@@ -1,25 +1,33 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { FiAward, FiBriefcase, FiHeadphones, FiFileText } from "react-icons/fi";
+import {
+  FiAward,
+  FiBriefcase,
+  FiHeadphones,
+  FiFileText,
+} from "react-icons/fi";
 import Image from "next/image";
 
 export default function About() {
+  const [showMore, setShowMore] = useState(false);
+
   const stats = [
     {
       icon: <FiAward />,
       title: "Experience",
-      desc: "1+ Years Working",
+      desc: "1+ Years Learning",
     },
     {
       icon: <FiBriefcase />,
-      title: "Completed",
-      desc: "15+ Projects",
+      title: "Projects",
+      desc: "15+ Completed",
     },
     {
       icon: <FiHeadphones />,
-      title: "Support",
-      desc: "Online 24/7",
+      title: "Passion",
+      desc: "Coding & Research",
     },
   ];
 
@@ -28,11 +36,12 @@ export default function About() {
       id="about"
       className="relative py-24 bg-[#030014] text-white overflow-hidden"
     >
+      {/* Background Glow */}
       <div className="absolute w-[500px] h-[500px] bg-blue-500/20 blur-3xl rounded-full top-[-100px] left-[-100px]"></div>
       <div className="absolute w-[400px] h-[400px] bg-purple-500/20 blur-3xl rounded-full bottom-[-100px] right-[-100px]"></div>
 
       <div className="max-w-6xl mx-auto px-6">
-        {/* Section Title */}
+        {/* Section Header */}
         <div className="max-w-6xl mx-auto flex text-center grid md:grid-cols-2 gap-10 items-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -42,6 +51,7 @@ export default function About() {
           >
             About Me
           </motion.h2>
+
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -53,7 +63,7 @@ export default function About() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Image with Modern Frame */}
+          {/* Left Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -62,9 +72,10 @@ export default function About() {
             className="relative flex justify-center"
           >
             <div className="relative w-72 h-72 md:w-80 md:h-80 group">
-              {/* Animated Glow behind image */}
+              {/* Glow */}
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
 
+              {/* Image */}
               <div className="relative w-full h-full rounded-[2rem] overflow-hidden border border-white/10 z-10 bg-[#030014]">
                 <Image
                   src="/my-pic.jpg"
@@ -76,14 +87,14 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Right: Content & Animated Stats */}
+          {/* Right Content */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            {/* Stats Cards */}
+            {/* Stats */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
               {stats.map((item, idx) => (
                 <motion.div
@@ -105,9 +116,11 @@ export default function About() {
                   >
                     {item.icon}
                   </motion.div>
+
                   <h3 className="font-bold text-xs text-white mb-1">
                     {item.title}
                   </h3>
+
                   <p className="text-[10px] text-gray-400 uppercase tracking-tight">
                     {item.desc}
                   </p>
@@ -115,22 +128,70 @@ export default function About() {
               ))}
             </div>
 
-            {/* English Bio Description */}
-            <p className="text-gray-400 text-lg leading-relaxed mb-10 text-center lg:text-left">
-              I am Rafiul Goni Rayhan, a dedicated Full-stack Web Developer and
-              AI/ML Research Trainee. Currently, I am in my final year of
-              Computer Science and Engineering at the University of Barishal. I
-              specialize in building scalable, high-performance web applications
-              that deliver seamless user experiences. Alongside development, I
-              am deeply involved in AI/ML research, exploring innovative ways to
-              solve real-world problems through data and intelligent systems.
-              Driven by a passion for clean code and continuous learning, I
-              strive to create impactful digital solutions at the intersection
-              of web technology and machine l
-            </p>
+            {/* About Text */}
+            <div className="text-gray-400 text-lg leading-relaxed text-center lg:text-left">
+              <p>
+                Hello! I’m{" "}
+                <span className="text-white font-semibold">
+                  Rafiul Goni Rayhan
+                </span>
+                , a passionate Full-stack Web Developer and AI/ML Research
+                Trainee currently studying Computer Science and Engineering at
+                the University of Barishal.
+              </p>
 
-            {/* Action Button */}
-            <div className="flex justify-center lg:justify-start">
+              {/* Hidden Content */}
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{
+                  opacity: showMore ? 1 : 0,
+                  height: showMore ? "auto" : 0,
+                }}
+                transition={{ duration: 0.5 }}
+                className="overflow-hidden"
+              >
+                <div className="space-y-5 mt-5">
+                  <p>
+                    My programming journey started with curiosity about how
+                    websites and software actually work behind the scenes. What
+                    began as simple HTML and CSS practice slowly turned into a
+                    deep passion for building modern web applications and
+                    solving real-world problems through technology.
+                  </p>
+
+                  <p>
+                    I enjoy working on creative and challenging projects,
+                    especially full-stack development, UI/UX design, and
+                    intelligent systems powered by AI.
+                  </p>
+
+                  <p>
+                    Outside of programming, I enjoy learning about new
+                    technologies, listening to music, watching tech content,
+                    and continuously improving my skills every day.
+                  </p>
+
+                  <p>
+                    I believe in continuous learning, consistency, and
+                    creativity. I always try to bring passion and personality
+                    into my work.
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* See More Button */}
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setShowMore(!showMore)}
+                className="mt-5 text-blue-400 hover:text-blue-300 font-semibold transition-all duration-300"
+              >
+                {showMore ? "See Less ↑" : "See More ↓"}
+              </motion.button>
+            </div>
+
+            {/* Download Button */}
+            <div className="flex justify-center lg:justify-start mt-10">
               <motion.a
                 href="/resume.pdf"
                 download

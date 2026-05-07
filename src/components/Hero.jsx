@@ -4,7 +4,12 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 
-const roles = ["Web Designer", "Frontend Developer", "Freelancer"];
+const roles = [
+  "Web Designer",
+  "Frontend Developer",
+  "Problem Solver",
+  "AI/ML Research Trainee",
+];
 
 export default function Hero() {
   const [text, setText] = useState("");
@@ -31,13 +36,11 @@ export default function Hero() {
 
   return (
     <section className="relative mt-30 min-h-screen flex items-center justify-center text-white overflow-hidden">
-
       <div className="absolute w-[500px] h-[500px] bg-blue-500/20 blur-3xl rounded-full top-[-100px] left-[-100px]"></div>
-      <div className="absolute w-[400px] h-[400px] bg-purple-500/20 blur-3xl rounded-full bottom-[-100px] right-[-100px]"></div>  
+      <div className="absolute w-[400px] h-[400px] bg-purple-500/20 blur-3xl rounded-full bottom-[-100px] right-[-100px]"></div>
 
       {/* Container */}
       <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-
         {/* LEFT */}
         <motion.div
           initial={{ opacity: 0, x: -80 }}
@@ -57,8 +60,8 @@ export default function Hero() {
           </h2>
 
           <p className="text-gray-400 mb-6 leading-relaxed">
-            🚀 I build modern, high-performance websites <br />
-            ⭐ Available for freelance & collaborations
+            🚀 I build modern, high-performance websites <br />⭐ Available for
+            freelance & collaborations
           </p>
 
           {/* Buttons */}
@@ -67,9 +70,12 @@ export default function Hero() {
               Hire Me <FaArrowRight />
             </button>
 
-            <button className="px-6 py-3 rounded-full border border-white/20 hover:bg-white/10 transition">
+            <a
+              href="#projects"
+              className="px-6 py-3 rounded-full border border-white/20 hover:bg-white/10 transition"
+            >
               View Work
-            </button>
+            </a>
           </div>
         </motion.div>
 
@@ -80,11 +86,11 @@ export default function Hero() {
           transition={{ duration: 1 }}
           className="relative flex justify-center"
         >
-
           {/* Profile */}
-          <div className="relative w-72 h-72 rounded-full flex items-center justify-center 
-          bg-gradient-to-tr from-blue-500/30 to-purple-500/30 border border-white/10 shadow-2xl">
-
+          <div
+            className="relative w-72 h-72 rounded-full flex items-center justify-center 
+          bg-gradient-to-tr from-blue-500/30 to-purple-500/30 border border-white/10 shadow-2xl"
+          >
             <img
               src="/my-pic.jpg"
               className="w-70 h-80 rounded-full object-cover"
@@ -99,7 +105,7 @@ export default function Hero() {
             transition={{ repeat: Infinity, duration: 4 }}
             className="absolute top-0 right-0 bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl text-sm border border-white/10"
           >
-            💡 A lots of Problems Solved...
+            💡 300+ Problems Solved...
           </motion.div>
 
           <motion.div
@@ -117,7 +123,6 @@ export default function Hero() {
           >
             🚀 15+ Projects
           </motion.div>
-
         </motion.div>
       </div>
     </section>

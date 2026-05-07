@@ -73,7 +73,7 @@ const Contact = () => {
           className="text-center mb-20"
         >
           <span className="text-blue-600 font-bold tracking-widest uppercase text-sm">Contact Me</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold mt-3 bg-clip-text text-transparent bg-linear-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
+          <h2 className="text-4xl p-5 md:text-5xl font-extrabold mt-3 bg-clip-text text-transparent bg-linear-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 ">
             Let&apos;s Build Something Great
           </h2>
         </motion.div>
@@ -122,6 +122,7 @@ const Contact = () => {
             className="lg:col-span-7 bg-white dark:bg-zinc-900 p-8 md:p-12 rounded-[2.5rem] shadow-2xl shadow-blue-500/5 border border-gray-100 dark:border-zinc-800"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
+              <h2 className="text-2xl font-bold text-gray-800 dark:text-zinc-200">Send me your message</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-semibold ml-1">Name</label>

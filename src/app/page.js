@@ -7,6 +7,9 @@ import Technologies from "@/components/Technologies";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
+import SocialLinks from "@/components/SocialLinks";
+import Education from "@/components/Education";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -48,10 +51,22 @@ export default function Home() {
           {/* <h2 className="text-4xl font-bold tracking-tighter opacity-20 uppercase italic">Projects Section</h2> */}
           <Projects/>
         </section>
+        <section id="SocialLinks" className="min-h-screen text-white flex items-center justify-center border-t border-white/5">
+          {/* <h2 className="text-4xl font-bold tracking-tighter opacity-20 uppercase italic">Projects Section</h2> */}
+          <SocialLinks/>
+        </section>
+        <section id="Education" className="min-h-screen text-white flex items-center justify-center border-t border-white/5">
+          {/* <h2 className="text-4xl font-bold tracking-tighter opacity-20 uppercase italic">Projects Section</h2> */}
+          <Education/>
+        </section>
 
-        <section id="contact" className="min-h-screen text-white flex items-center justify-center border-t border-white/5">
+        <section id="Contact" className="min-h-screen text-white flex items-center justify-center border-t border-white/5">
           {/* <h2 className="text-4xl font-bold tracking-tighter opacity-20 uppercase italic">Contact Section</h2> */}
           <Contact/>
+        </section>
+        <section id="Footer" className="min-h-screen text-white flex items-center justify-center border-t border-white/5">
+          {/* <h2 className="text-4xl font-bold tracking-tighter opacity-20 uppercase italic">Contact Section</h2> */}
+          <Footer/>
         </section>
       </div>
     </main>
