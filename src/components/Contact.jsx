@@ -62,7 +62,7 @@ const Contact = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-[#fafafa] dark:bg-zinc-950" id="contact">
+    <section className="relative mt-30 min-h-screen flex items-center justify-center text-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         
         {/* Header */}

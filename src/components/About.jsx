@@ -34,11 +34,11 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative py-24 bg-[#030014] text-white overflow-hidden"
+      className="relative mt-30 min-h-screen flex items-center justify-center text-white overflow-hidden"
     >
       {/* Background Glow */}
-      <div className="absolute w-[500px] h-[500px] bg-blue-500/20 blur-3xl rounded-full top-[-100px] left-[-100px]"></div>
-      <div className="absolute w-[400px] h-[400px] bg-purple-500/20 blur-3xl rounded-full bottom-[-100px] right-[-100px]"></div>
+      {/* <div className="absolute w-[500px] h-[500px] bg-blue-500/20 blur-3xl rounded-full top-[-100px] left-[-100px]"></div>
+      <div className="absolute w-[400px] h-[400px] bg-purple-500/20 blur-3xl rounded-full bottom-[-100px] right-[-100px]"></div> */}
 
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}

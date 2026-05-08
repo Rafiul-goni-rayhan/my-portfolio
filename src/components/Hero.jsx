@@ -36,8 +36,8 @@ export default function Hero() {
 
   return (
     <section className="relative mt-30 min-h-screen flex items-center justify-center text-white overflow-hidden">
-      <div className="absolute w-[500px] h-[500px] bg-blue-500/20 blur-3xl rounded-full top-[-100px] left-[-100px]"></div>
-      <div className="absolute w-[400px] h-[400px] bg-purple-500/20 blur-3xl rounded-full bottom-[-100px] right-[-100px]"></div>
+      {/* <div className="absolute w-[500px] h-[500px] bg-blue-500/20 blur-3xl rounded-full top-[-100px] left-[-100px]"></div>
+      <div className="absolute w-[400px] h-[400px] bg-purple-500/20 blur-3xl rounded-full bottom-[-100px] right-[-100px]"></div> */}
 
       {/* Container */}
       <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">

@@ -30,7 +30,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative py-10 bg-[#030014] text-white overflow-hidden border-t border-white/10">
+    <footer className="relative py-10 bg-transparent text-white overflow-hidden border-t border-white/10 backdrop-blur-sm">
       {/* Background Glow */}
       <div className="absolute w-[300px] h-[300px] bg-blue-500/10 blur-3xl rounded-full top-[-100px] left-[-100px]"></div>
 

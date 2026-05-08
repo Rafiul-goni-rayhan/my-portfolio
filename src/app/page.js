@@ -1,5 +1,5 @@
 "use client";
-
+import SkillClickEffect from "@/components/SkillClickEffect";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -28,6 +28,7 @@ export default function Home() {
 
       {/* Content Layer */}
       <div className="relative z-10">
+        <SkillClickEffect />
         <Navbar />
 
         <section id="home">

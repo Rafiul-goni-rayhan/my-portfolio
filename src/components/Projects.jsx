@@ -120,7 +120,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="relative py-24 bg-[#030014] text-white overflow-hidden min-h-screen">
+    <section id="projects" className="relative mt-30 min-h-screen flex items-center justify-center text-white overflow-hidden">
       <div className="absolute w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full -top-24 -left-24 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
