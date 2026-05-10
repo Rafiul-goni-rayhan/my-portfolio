@@ -61,7 +61,7 @@ export default function Home() {
           <Education/>
         </section>
 
-        <section id="Contact" className="min-h-screen text-white flex items-center justify-center border-t border-white/5">
+        <section id="contact" className="min-h-screen text-white flex items-center justify-center border-t border-white/5">
           {/* <h2 className="text-4xl font-bold tracking-tighter opacity-20 uppercase italic">Contact Section</h2> */}
           <Contact/>
         </section>
