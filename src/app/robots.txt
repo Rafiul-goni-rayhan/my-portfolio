@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://my-portfolio-virid-phi-51.vercel.app/sitemap.xml

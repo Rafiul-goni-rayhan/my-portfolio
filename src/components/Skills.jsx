@@ -13,6 +13,7 @@ const Skills = () => {
         // { name: "TypeScript", level: "Expert" },
         { name: "Tailwind Css", level: "Expert" },
         { name: "JavaScript", level: "Expert" },
+        { name: "TypeScript", level: "Expert" },
         { name: "React.JS", level: "Expert" },
       ],
     },

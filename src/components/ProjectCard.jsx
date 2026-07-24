@@ -5,6 +5,7 @@ import { FiGithub, FiArrowRight } from "react-icons/fi";
 import Image from "next/image";
 
 const ProjectCard = ({ project, idx, setSelectedProject }) => {
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -24,6 +25,7 @@ const ProjectCard = ({ project, idx, setSelectedProject }) => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#030014] to-transparent opacity-60"></div>
       </div>
+
 
       {/* Content Area */}
       <div className="p-8">

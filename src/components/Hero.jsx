@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
-
+import { Rocket, Star } from 'lucide-react';
 const roles = [
-  "Web Designer",
-  "Frontend Developer",
+  "Full Stack Developer",
+  "Full Stack Developer",
   "Problem Solver",
   "AI/ML Research Trainee",
 ];
@@ -59,11 +59,16 @@ export default function Hero() {
             <span className="animate-pulse">|</span>
           </h2>
 
-          <p className="text-gray-400 mb-6 leading-relaxed">
-            🚀 I build modern, high-performance websites <br />⭐ Available for
-            freelance & collaborations
-          </p>
-
+<div className="text-gray-400 mb-6 leading-relaxed space-y-2">
+  <p className="flex items-center gap-2">
+    <Rocket className="w-5 h-5 text-indigo-500 animate-pulse" /> 
+    <span>I build modern, high-performance websites</span>
+  </p>
+  <p className="flex items-center gap-2">
+    <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" /> 
+    <span>Available for freelance & collaborations</span>
+  </p>
+</div>
           {/* Buttons */}
           <div className="flex gap-4">
             <button className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-6 py-3 rounded-full backdrop-blur-md border border-white/10 transition shadow-lg">

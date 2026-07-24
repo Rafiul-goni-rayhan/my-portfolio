@@ -6,9 +6,84 @@ import ProjectModal from "./ProjectModal";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+const projectList = [
+  {
+    id: "tripmind-ai",
 
-  const projectList = [
-    {
+    title: "TripMind AI: AI-Powered Trip Planning Platform",
+
+    shortDesc:
+      "A smart travel planning platform with an AI travel assistant, personalized trip recommendations, and curated destinations across Bangladesh.",
+
+    description:
+      "TripMind AI is an AI-powered trip planning platform that helps users discover and book their perfect adventure. Users can chat with a 24/7 AI travel assistant, get personalized trip recommendations based on budget and interests, and explore verified, curated destinations across Bangladesh.",
+
+    image: "/tripmind.png",
+
+    techStack: [
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "AI Integration",
+    ],
+    // <a href="https://github.com/..." >View TripMind AI Source Code on GitHub</a>
+    github: "https://github.com/Rafiul-goni-rayhan/tripmind-ai-frontend",
+
+    live: "https://tripmind-ai-frontend.vercel.app/",
+
+    challenges: [
+      "AI recommendation engine integration",
+      "Real-time AI chat assistant",
+      "Dynamic trip filtering & search",
+    ],
+
+    futurePlans: [
+      "AI-generated itinerary builder",
+      "Multi-language trip support",
+      "Payment gateway integration",
+    ],
+  },
+
+  {
+    id: "bookhub",
+
+    title: "BookHub: Buy & Sell Used Books Platform",
+
+    shortDesc:
+      "A full-stack book marketplace where users can buy, sell, and exchange used books with a secure, community-driven experience.",
+
+    description:
+      "BookHub is a full-stack platform built for buying and selling used books, connecting readers directly with sellers. Users can list books by category, search and filter through thousands of listings, and communicate safely through verified profiles.",
+
+    image: "/bookhub.png",
+
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Better Auth",
+      "MongoDB",
+      "Tailwind CSS",
+    ],
+
+    github: "https://github.com/Rafiul-goni-rayhan/bookshub",
+
+    live: "https://bookshub-nu.vercel.app/",
+
+    challenges: [
+      "Role-based authentication with Better Auth",
+      "Book listing & category filtering",
+      "Separate frontend/backend architecture",
+    ],
+
+    futurePlans: [
+      "In-app messaging between buyer & seller",
+      "Book condition rating system",
+      "Wishlist & saved searches",
+    ],
+  },
+   {
       id: "skillsphere",
 
       title: "SkillsSphere: A Comprehensive Learning Platform",
@@ -29,7 +104,7 @@ const Projects = () => {
         "Stripe",
         "Tailwind CSS",
       ],
-
+      // <a href="https://github.com/..." >View SkillSphere Source Code on GitHub</a>
       github: "https://github.com/Rafiul-goni-rayhan/skillsphere",
 
       live: "https://skillsphere-vert.vercel.app/",
@@ -46,80 +121,127 @@ const Projects = () => {
         "Advanced instructor analytics",
       ],
     },
+];
+  // const projectList = [
+  //   {
+  //     id: "skillsphere",
 
-    {
-      id: "pixgen",
+  //     title: "SkillsSphere: A Comprehensive Learning Platform",
 
-      title: "PixGen: AI-Powered Image Generation",
+  //     shortDesc:
+  //       "A modern full-stack LMS platform with secure authentication, course management, Stripe payments, and real-time progress tracking.",
 
-      shortDesc:
-        "An AI SaaS platform that generates high-quality images from text prompts using Cloudinary AI integration.",
+  //     description:
+  //       "SkillsSphere is a complete Learning Management System (LMS) built using modern web technologies. The platform allows users to browse courses, enroll securely through Stripe payments, and track learning progress in real time.",
 
-      description:
-        "PixGen is an AI-powered SaaS application designed for generating creative images from text prompts with secure authentication and Stripe integration.",
+  //     image: "/skillsphere..png",
 
-      image: "/pixgen.png",
+  //     techStack: [
+  //       "Next.js",
+  //       "Node.js",
+  //       "Express.js",
+  //       "MongoDB",
+  //       "Stripe",
+  //       "Tailwind CSS",
+  //     ],
+  //     // <a href="https://github.com/..." >View SkillSphere Source Code on GitHub</a>
+  //     github: "https://github.com/Rafiul-goni-rayhan/skillsphere",
 
-      techStack: ["Next.js 15", "Tailwind CSS", "Cloudinary AI", "MongoDB"],
+  //     live: "https://skillsphere-vert.vercel.app/",
 
-      github: "https://github.com/Rafiul-goni-rayhan/pixgen-prac",
+  //     challenges: [
+  //       "Stripe payment integration",
+  //       "Authentication & protected routes",
+  //       "Real-time course progress tracking",
+  //     ],
 
-      live: "https://pixgen-prac.vercel.app",
+  //     futurePlans: [
+  //       "AI-based course recommendation",
+  //       "Certificate generation system",
+  //       "Advanced instructor analytics",
+  //     ],
+  //   },
 
-      challenges: [
-        "AI API integration",
-        "Image optimization",
-        "Credit-based system management",
-      ],
+  //   {
+  //     id: "pixgen",
 
-      futurePlans: [
-        "Multiple AI image styles",
-        "Image editing system",
-        "HD image downloads",
-      ],
-    },
+  //     title: "PixGen: AI-Powered Image Generation",
 
-    {
-      id: "dragon-news",
+  //     shortDesc:
+  //       "An AI SaaS platform that generates high-quality images from text prompts using Cloudinary AI integration.",
 
-      title: "Dragon-news: Dynamic News & Media Portal",
+  //     description:
+  //       "PixGen is an AI-powered SaaS application designed for generating creative images from text prompts with secure authentication and Stripe integration.",
 
-      shortDesc:
-        "A responsive digital newspaper platform with category filtering, trending news, and interactive user engagement.",
+  //     image: "/pixgen.png",
 
-      description:
-        "Dragon-news is a dynamic digital news platform developed for delivering real-time news content with modern UI and responsive design.",
+  //     techStack: ["Next.js 15", "Tailwind CSS", "Cloudinary AI", "MongoDB"],
 
-      image: "/news.png",
+  //     github: "https://github.com/Rafiul-goni-rayhan/pixgen-prac",
 
-      techStack: [
-        "Next.js",
-        "Tailwind CSS",
-        "Node.js",
-        "MongoDB",
-        "Firebase",
-        "Framer Motion",
-      ],
+  //     live: "https://pixgen-prac.vercel.app",
 
-      github: "https://github.com/Rafiul-goni-rayhan/news-paper",
+  //     challenges: [
+  //       "AI API integration",
+  //       "Image optimization",
+  //       "Credit-based system management",
+  //     ],
 
-      live: "https://news-paper-nu.vercel.app/category/01",
+  //     futurePlans: [
+  //       "Multiple AI image styles",
+  //       "Image editing system",
+  //       "HD image downloads",
+  //     ],
+  //   },
 
-      challenges: [
-        "Dynamic category management",
-        "Responsive design optimization",
-        "Authentication security",
-      ],
+  //   {
+  //     id: "dragon-news",
 
-      futurePlans: [
-        "AI-powered news recommendation",
-        "Multilingual support",
-        "Bookmark system",
-      ],
-    },
-  ];
+  //     title: "Dragon-news: Dynamic News & Media Portal",
 
+  //     shortDesc:
+  //       "A responsive digital newspaper platform with category filtering, trending news, and interactive user engagement.",
+
+  //     description:
+  //       "Dragon-news is a dynamic digital news platform developed for delivering real-time news content with modern UI and responsive design.",
+
+  //     image: "/news.png",
+
+  //     techStack: [
+  //       "Next.js",
+  //       "Tailwind CSS",
+  //       "Node.js",
+  //       "MongoDB",
+  //       "Firebase",
+  //       "Framer Motion",
+  //     ],
+
+  //     github: "https://github.com/Rafiul-goni-rayhan/news-paper",
+
+  //     live: "https://news-paper-nu.vercel.app/category/01",
+
+  //     challenges: [
+  //       "Dynamic category management",
+  //       "Responsive design optimization",
+  //       "Authentication security",
+  //     ],
+
+  //     futurePlans: [
+  //       "AI-powered news recommendation",
+  //       "Multilingual support",
+  //       "Bookmark system",
+  //     ],
+  //   },
+  // ];
+
+
+
+{/* <div>
+  <img src="/images/project1.png" alt="SkillSphere E-Learning Platform Dashboard Interface" />
+</div> */}
+  
   return (
+    
     <section id="projects" className="relative mt-30 min-h-screen flex items-center justify-center text-white overflow-hidden">
       <div className="absolute w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full -top-24 -left-24 pointer-events-none" />
 

@@ -34,6 +34,8 @@ const ProjectModal = ({ project, onClose }) => {
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a1a] via-transparent to-transparent"></div>
         </div>
 
+        
+
         {/* Modal Content */}
         <div className="p-8 md:p-12">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
